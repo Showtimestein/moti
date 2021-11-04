@@ -1,0 +1,28 @@
+<%= form_with(model: reminder) do |form| %>
+  <% if reminder.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(reminder.errors.count, "error") %> prohibited this reminder from being saved:</h2>
+
+      <ul>
+        <% reminder.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <div class="field form-group">
+    <%= form.text_field :goal, class:"form-control", placeholder:"What do you want to accomplish?" %>
+  </div>
+
+  <br>
+
+  <div class="field form-group">
+    <%= form.number_field :user_id, id: :reminder_user_id, class:"form-control", value: current_user.id, type: :hidden %>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit class:'btn btn-dark' %>
+  </div>
+<% end %>

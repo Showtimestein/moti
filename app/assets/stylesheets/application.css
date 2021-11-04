@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&family=Press+Start+2P&family=Rhodium+Libre&display=swap');
+/*Background styling*/
+body{
+    
+    background-image: linear-gradient(to bottom, #a8eb12, #7bf880, #6bfec3, #051937);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+/*Link styling*/
+.goal-link{
+    color: white;
+    text-decoration: none;
+    
+}
+
+.goal-link:hover{
+    color: gray;
+    text-decoration: underline;
+}
+
+.log-in-link{
+    color: black;
+    text-decoration: none;
+
+}
+
+.log-in-link:hover{
+    color: gray;
+    text-decoration: underline;
+}
+
+.sign-up-link{
+    color: black;
+    text-decoration: none;
+
+}
+
+.sign-up-link:hover{
+    color: gray;
+    text-decoration: underline;
+}
+
+.forgot-your-password-link{
+    color: black;
+    text-decoration: none;
+
+}
+
+.forgot-your-password-link:hover{
+    color: gray;
+    text-decoration: underline;
+}
+
+/*Button styling*/
+.btn-secondary:hover{
+
+    color: black;
+
+}
+
+
