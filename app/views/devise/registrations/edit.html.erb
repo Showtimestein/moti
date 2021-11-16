@@ -6,13 +6,13 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field form-group">
-     <%= f.text_field :name, class:"form-control", placeholder:"First Name" %>
+     <%= f.text_field :name, class:"form-control", placeholder:"First Name", autofocus: true %>
   </div>
 
 <br>
 
   <div class="field form-group">
-     <%= f.text_field :phone, class:"form-control", placeholder:"Phone #: +1234567890" %>
+     <%= f.text_field :phone, class:"form-control", placeholder:"Phone #: +1234567890", autofocus: true %>
   </div>
 
 <br>

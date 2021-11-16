@@ -1,4 +1,5 @@
 class RemindersController < ApplicationController
+  include Devise::Controllers::Helpers
   before_action :set_reminder, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, expect: [:index, :show]
   before_action :correct_user, only: [:edit, :update, :destroy]
@@ -25,7 +26,8 @@ class RemindersController < ApplicationController
   def create
     #@reminder = Reminder.new(reminder_params)
     @reminder = current_user.reminders.build(reminder_params)
-
+    @reminder_user_phone = current_user.phone
+    @reminder_user_name = current_user.name
     respond_to do |format|
       if @reminder.save
         format.html { redirect_to @reminder, notice: "Reminder was successfully created." }
@@ -64,6 +66,8 @@ def correct_user
   redirect_to reminders_path, notice: "Not Authorized To Edit This Reminder" if @reminder.nil?
 
 end
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
